@@ -20,6 +20,7 @@ namespace travel_agency_back.Controllers
         /* Peticiones http: GET, POST, PUT, DELETE */
         [HttpGet("cities") ]
         public async Task<ActionResult> Get(){
+            /* expreciones linq: son funciones para manejar colecciones o tablas en c# */
             List<City> cities = await context.Cities.ToListAsync();
             /* Metodo Ok pone a nuestra respuesta el status 200 */
             return Ok(cities);

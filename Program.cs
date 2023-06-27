@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+/* conexion a la base de datos */
 builder.Services.AddDbContext<TravelAgencyContext>( options =>{
     options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"));
 });
